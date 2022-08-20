@@ -2,7 +2,7 @@ package util;
 
 import org.junit.Test;
 
-import swati4star.createpdf.util.SplitPDFUtils;
+import edison.readpdf.util.SplitPDFUtils;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

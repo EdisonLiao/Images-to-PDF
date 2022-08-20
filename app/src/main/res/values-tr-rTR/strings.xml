@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PDF Dönüştürücü</string>
+    <string name="app_name">PDF Okuyucu Dönüştürücü</string>
     <string name="title">PDF Hareketleri</string>
 
     <string name="file_name_text">Dosya Adı</string>
@@ -155,7 +155,7 @@
     <string name="share_chooser">Mesaj göndermek için uygulama seçin...</string>
 
     <!-- Rate us strings -->
-    <string name="rate_us_text">Merhaba, bu uygulamayı PlayStore\'dan indirdim. Denemek için : https://play.google.com/store/apps/details?id=swati4star.createpdf Resimleri kolay bir şekilde PDF dosyasına çevirebiliyor üstelik açık kaynak kodlu :)</string>
+    <string name="rate_us_text">Merhaba, bu uygulamayı PlayStore\'dan indirdim. Denemek için : https://play.google.com/store/apps/details?id=edison.readpdf Resimleri kolay bir şekilde PDF dosyasına çevirebiliyor üstelik açık kaynak kodlu :)</string>
     <string name="snackbar_no_share_app">Paylaşacak uygulama yok.</string>
 
     <!-- Select Images string -->

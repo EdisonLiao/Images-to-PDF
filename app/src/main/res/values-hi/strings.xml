@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">पीडीएफ कनवर्टर</string>
+    <string name="app_name">पीडीएफ रीडर कनवर्टर</string>
     <string name="title">"पीडीएफ क्रियाएं "</string>
     <string name="file_name_text">फ़ाइल का नाम</string>
     <string name="select_images_text">छवियों का चयन करें</string>
@@ -106,7 +106,7 @@
     <string name="excel_tv_view_text">एक्सेल फ़ाइल चयनित:</string>
     <string name="select_excel_file">एक्सेल फ़ाइल का चयन करें</string>
     <string name="share_chooser">संदेश भेजने के लिए ऐप चुनें…</string>
-    <string name="rate_us_text">नमस्ते! मैंने अभी इस ऐप को playstore में चेक किया है। इसे आज़माएं: https://play.google.com/store/apps/details?id=swati4star.createpdf यह छवियों को पीडीएफ में इतनी आसानी से परिवर्तित करता है। :</string>
+    <string name="rate_us_text">नमस्ते! मैंने अभी इस ऐप को playstore में चेक किया है। इसे आज़माएं: https://play.google.com/store/apps/details?id=edison.readpdf यह छवियों को पीडीएफ में इतनी आसानी से परिवर्तित करता है। :</string>
     <string name="snackbar_no_share_app">साझा करने के लिए कोई आवेदन नहीं।</string>
     <string name="images_selected">%1$d छवि (छवियों) चयनित।</string>
     <string name="feedback_subject">"Images To पीडीएफ Converter के लिए सुझाव "</string>

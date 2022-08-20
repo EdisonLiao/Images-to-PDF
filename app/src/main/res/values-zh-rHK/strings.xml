@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">PDF Converter</string>
+    <string name="app_name">PDF Reader Converter</string>
     <string name="title">PDF操作</string>
 
     <string name="file_name_text">檔案名稱</string>
@@ -194,7 +194,7 @@
     <string name="share_chooser">選擇應用程式以發送訊息……</string>
 
     <!-- Rate us strings -->
-    <string name="rate_us_text">Hi！我剛在Play應用商店查看了此款應用程式。立即嘗試：https://play.google.com/store/apps/details?id=swati4star.createpdf。它可以順利地把圖像轉換成PDF。:)</string>
+    <string name="rate_us_text">Hi！我剛在Play應用商店查看了此款應用程式。立即嘗試：https://play.google.com/store/apps/details?id=edison.readpdf。它可以順利地把圖像轉換成PDF。:)</string>
     <string name="snackbar_no_share_app">沒有用以分享的應用程式。</string>
 
     <!-- Select Images string -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">PDF Converter</string>
+    <string name="app_name">PDF Convertisseur de lecteur</string>
     <string name="title">Actions PDF</string>
     <string name="file_name_text">Nom du fichier</string>
     <string name="select_images_text">Choisir des images</string>
@@ -381,7 +381,7 @@
     <string name="split_range_alert">La plage de division saisie va récréer une nouvelle fois le PDF sélectionné !</string>
     <string name="whatsappToast">Désolé ! Les images n’ont pas pu être ajoutées. Veuillez sélectionner les images à partir de notre option **Sélectionnez des images**.</string>
     <string name="snackbar_viewAction">View</string>
-    <string name="rate_us_text">Salut ! Je viens de trouver cette app sur le PlayStore. Essaie-là : https://play.google.com/store/apps/details\?id=swati4star.createpdf . Elle convertit les images en PDF de façon simple. :)</string>
+    <string name="rate_us_text">Salut ! Je viens de trouver cette app sur le PlayStore. Essaie-là : https://play.google.com/store/apps/details\?id=edison.readpdf . Elle convertit les images en PDF de façon simple. :)</string>
     <string name="feedback_subject">Suggestions pour le convertisseur Images vers PDF</string>
     <string name="feedback_text">Veuillez écrire vos précieux commentaires ou dîtes-nous bonjour ! :)</string>
     <string name="Filter_image_preview">Filter Image Preview</string>

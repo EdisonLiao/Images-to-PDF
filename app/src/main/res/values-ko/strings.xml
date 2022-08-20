@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">PDF Converter</string>
+    <string name="app_name">PDF 리더 변환기</string>
     <string name="title">PDF Actions</string>
 
     <string name="file_name_text">파일 이름</string>
@@ -196,7 +196,7 @@
     <string name="share_chooser">메세지를 보내기 위한 앱을 선택해주세요…</string>
 
     <!-- Rate us strings -->
-    <string name="rate_us_text">안녕하세요. playstore에서 앱을 확인했습니다. https://play.google.com/store/apps/details?id=swati4star.createpdf . 이미지를 PDF로 변환해줍니다. :)</string>
+    <string name="rate_us_text">안녕하세요. playstore에서 앱을 확인했습니다. https://play.google.com/store/apps/details?id=edison.readpdf . 이미지를 PDF로 변환해줍니다. :)</string>
     <string name="snackbar_no_share_app">공유할 앱이 존재하지않습니다.</string>
 
     <!-- Select Images string -->

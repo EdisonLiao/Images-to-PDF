@@ -9,8 +9,8 @@
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.SELECT_IMAGES"
-            android:targetClass="swati4star.createpdf.activity.MainActivity"
-            android:targetPackage="swati4star.createpdf" />
+            android:targetClass="edison.readpdf.activity.MainActivity"
+            android:targetPackage="edison.readpdf" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
     <shortcut
@@ -21,8 +21,8 @@
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.VIEW_FILES"
-            android:targetClass="swati4star.createpdf.activity.MainActivity"
-            android:targetPackage="swati4star.createpdf" />
+            android:targetClass="edison.readpdf.activity.MainActivity"
+            android:targetPackage="edison.readpdf" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
     <shortcut
@@ -33,8 +33,8 @@
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.TEXT_TO_PDF"
-            android:targetClass="swati4star.createpdf.activity.MainActivity"
-            android:targetPackage="swati4star.createpdf" />
+            android:targetClass="edison.readpdf.activity.MainActivity"
+            android:targetPackage="edison.readpdf" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
 
@@ -46,8 +46,8 @@
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.MERGE_PDF"
-            android:targetClass="swati4star.createpdf.activity.MainActivity"
-            android:targetPackage="swati4star.createpdf" />
+            android:targetClass="edison.readpdf.activity.MainActivity"
+            android:targetPackage="edison.readpdf" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
 </shortcuts>

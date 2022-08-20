@@ -1,4 +1,4 @@
-package swati4star.createpdf.util;
+package edison.readpdf.util;
 
 import androidx.test.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;

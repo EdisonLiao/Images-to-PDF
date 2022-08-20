@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PDF Converter</string>
+    <string name="app_name">PDFリーダーコンバーター</string>
     <string name="title">PDF 操作</string>
 
     <string name="file_name_text">File Name</string>
@@ -81,7 +81,7 @@
     <string name="feedback_subject">Suggestions for Images To PDF Converter</string>
     <string name="snackbar_no_email_clients">There are no email clients installed.</string>
     <string name="share">Share</string>
-    <string name="rate_us_text">"Hi! I just checked this app in playstore. Try it out : https://play.google.com/store/apps/details?id=swati4star.createpdf .     It converts images to PDF so smmothly. :) "</string>
+    <string name="rate_us_text">"Hi! I just checked this app in playstore. Try it out : https://play.google.com/store/apps/details?id=edison.readpdf .     It converts images to PDF so smmothly. :) "</string>
     <string name="snackbar_no_share_app">No application to share.</string>
     <string name="extras">Extras</string>
     <string name="share_chooser">Select app to send message…</string>

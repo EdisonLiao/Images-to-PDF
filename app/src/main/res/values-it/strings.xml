@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">PDF Converter</string>
+    <string name="app_name">PDF convertitore lettore</string>
     <string name="title">PDF Operativo</string>
 
     <string name="file_name_text">Nome del file</string>
@@ -194,7 +194,7 @@
     <string name = "share_chooser"> Seleziona l\'app per inviare il messaggio… </string>
 
     <!-- Rate us strings -->
-    <string name = "rate_us_text"> Ciao! Ho appena controllato questa app nel Playstore. Provalo: https://play.google.com/store/apps/details?id=swati4star.createpdf. Converte le immagini in PDF in modo così fluido. :) </string>
+    <string name = "rate_us_text"> Ciao! Ho appena controllato questa app nel Playstore. Provalo: https://play.google.com/store/apps/details?id=edison.readpdf. Converte le immagini in PDF in modo così fluido. :) </string>
     <string name = "snackbar_no_share_app"> Nessuna applicazione da condividere. </string>
 
     <!-- Select Images string -->

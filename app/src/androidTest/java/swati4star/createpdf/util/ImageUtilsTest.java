@@ -1,4 +1,4 @@
-package swati4star.createpdf.util;
+package edison.readpdf.util;
 
 
 import android.graphics.Bitmap;

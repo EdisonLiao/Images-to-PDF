@@ -1,4 +1,4 @@
-package swati4star.createpdf;
+package edison.readpdf;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -16,6 +16,6 @@ public class ApplicationTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("swati4star.createpdf", appContext.getPackageName());
+        assertEquals("edison.readpdf", appContext.getPackageName());
     }
 }

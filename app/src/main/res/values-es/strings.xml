@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PDF Converter</string>
+    <string name="app_name">PDF Convertidor de lector de</string>
     <string name="title">Acciones PDF</string>
 
     <string name="file_name_text">Nombre del archivo</string>
@@ -81,7 +81,7 @@
     <string name="feedback_subject">Sugerencias para PDF Converter</string>
     <string name="snackbar_no_email_clients">No hay ningún cliente de correo instalado.</string>
     <string name="share">Compartir</string>
-    <string name="rate_us_text">"¡Hola! acabo de revisar esta app en la playstore. Pruébalo en : https://play.google.com/store/apps/details?id=swati4star.createpdf .     Convierte imágenes a PDF ágilmente. :) "</string>
+    <string name="rate_us_text">"¡Hola! acabo de revisar esta app en la playstore. Pruébalo en : https://play.google.com/store/apps/details?id=edison.readpdf .     Convierte imágenes a PDF ágilmente. :) "</string>
     <string name="snackbar_no_share_app">Ninguna aplicación para compartir.</string>
     <string name="extras">Extras</string>
     <string name="share_chooser">Seleccione la app para enviar el mensaje…</string>

@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">PDF Konverter</string>
+    <string name="app_name">PDF Reader Converter</string>
     <string name="title">PDF Akcije</string>
 
     <string name="file_name_text">Naziv Datoteke</string>
@@ -195,7 +195,7 @@
     <string name="share_chooser">Odaberite aplikaciju za slanje poruke…</string>
 
     <!-- Rate us strings -->
-    <string name="rate_us_text">Zdravo! Pronašao/la sam ovu aplikaciju na Google trgovini. Isprobajte : https://play.google.com/store/apps/details?id=swati4star.createpdf . Ona brzo i jednostavno pretvara fotografije u PDF. :)</string>
+    <string name="rate_us_text">Zdravo! Pronašao/la sam ovu aplikaciju na Google trgovini. Isprobajte : https://play.google.com/store/apps/details?id=edison.readpdf . Ona brzo i jednostavno pretvara fotografije u PDF. :)</string>
     <string name="snackbar_no_share_app">Nema aplikacije za dijeljenje.</string>
 
     <!-- Select Images string -->
