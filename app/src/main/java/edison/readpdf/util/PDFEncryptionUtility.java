@@ -80,7 +80,7 @@ public class PDFEncryptionUtility {
                 String path = doEncryption(filePath, mPassword);
                 StringUtils.getInstance().getSnackbarwithAction(mContext, R.string.snackbar_pdfCreated)
                         .setAction(R.string.snackbar_viewAction, v2 ->
-                                mFileUtils.openFile(path, FileUtils.FileType.e_PDF)).show();
+                                mFileUtils.openFile(mContext,path, FileUtils.FileType.e_PDF)).show();
                 if (dataSetChanged != null)
                     dataSetChanged.updateDataset();
             } catch (IOException | DocumentException e) {
@@ -236,7 +236,7 @@ public class PDFEncryptionUtility {
                 final String filepath = finalOutputFile;
                 StringUtils.getInstance().getSnackbarwithAction(mContext, R.string.snackbar_pdfCreated)
                         .setAction(R.string.snackbar_viewAction,
-                                v2 -> mFileUtils.openFile(filepath, FileUtils.FileType.e_PDF)).show();
+                                v2 -> mFileUtils.openFile(mContext,filepath, FileUtils.FileType.e_PDF)).show();
                 return true;
             }
         } catch (DocumentException | IOException e) {
@@ -265,7 +265,7 @@ public class PDFEncryptionUtility {
             final String filepath = finalOutputFile;
             StringUtils.getInstance().getSnackbarwithAction(mContext, R.string.snackbar_pdfCreated)
                     .setAction(R.string.snackbar_viewAction, v2 ->
-                            mFileUtils.openFile(filepath, FileUtils.FileType.e_PDF)).show();
+                            mFileUtils.openFile(mContext,filepath, FileUtils.FileType.e_PDF)).show();
             return true;
 
         } catch (DocumentException | IOException e) {

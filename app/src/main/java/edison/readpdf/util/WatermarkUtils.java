@@ -103,7 +103,7 @@ public class WatermarkUtils {
                 dataSetChanged.updateDataset();
                 StringUtils.getInstance().getSnackbarwithAction(mContext, R.string.watermark_added).setAction(
                         R.string.snackbar_viewAction, v1 ->
-                                mFileUtils.openFile(filePath, FileUtils.FileType.e_PDF)).show();
+                                mFileUtils.openFile(mContext,filePath, FileUtils.FileType.e_PDF)).show();
             } catch (IOException | DocumentException e) {
                 e.printStackTrace();
                 StringUtils.getInstance().showSnackbar(mContext, R.string.cannot_add_watermark);

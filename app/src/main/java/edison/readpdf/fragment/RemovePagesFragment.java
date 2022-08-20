@@ -291,7 +291,7 @@ public class RemovePagesFragment extends Fragment implements MergeFilesAdapter.O
         if (success && path != null && mPath != null) {
             StringUtils.getInstance().getSnackbarwithAction(mActivity, R.string.snackbar_pdfCreated)
                     .setAction(R.string.snackbar_viewAction,
-                            v -> mFileUtils.openFile(path, FileUtils.FileType.e_PDF)).show();
+                            v -> mFileUtils.openFile(requireContext(),path, FileUtils.FileType.e_PDF)).show();
             new DatabaseHelper(mActivity).insertRecord(path,
                     mActivity.getString(R.string.created));
             File input = new File(mPath);
@@ -309,7 +309,7 @@ public class RemovePagesFragment extends Fragment implements MergeFilesAdapter.O
 
     private void viewPdfButton(String path) {
         mViewPdf.setVisibility(View.VISIBLE);
-        mViewPdf.setOnClickListener(v -> mFileUtils.openFile(path, FileUtils.FileType.e_PDF));
+        mViewPdf.setOnClickListener(v -> mFileUtils.openFile(requireContext(),path, FileUtils.FileType.e_PDF));
     }
 
     @Override

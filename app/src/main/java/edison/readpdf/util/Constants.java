@@ -87,7 +87,7 @@ public class Constants {
     public static final String docxExtension = ".docx";
     public static final String tempDirectory = "temp";
 
-    public static final String AUTHORITY_APP = "com.swati4star.shareFile";
+    public static final String AUTHORITY_APP = "com.edison.shareFile";
 
     public static final String ACTION_SELECT_IMAGES = "android.intent.action.SELECT_IMAGES";
     public static final String ACTION_VIEW_FILES = "android.intent.action.VIEW_FILES";
@@ -113,10 +113,10 @@ public class Constants {
 
 
     public static final String[] WRITE_PERMISSIONS = {
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE
     };
     public static final String[] READ_PERMISSIONS = {
-            Manifest.permission.READ_EXTERNAL_STORAGE
+            Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
 
 

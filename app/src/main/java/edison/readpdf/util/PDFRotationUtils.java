@@ -88,7 +88,7 @@ public class PDFRotationUtils {
             reader.close();
             StringUtils.getInstance().getSnackbarwithAction(mContext, R.string.snackbar_pdfCreated)
                     .setAction(R.string.snackbar_viewAction, v ->
-                            mFileUtils.openFile(destFilePath, FileUtils.FileType.e_PDF)).show();
+                            mFileUtils.openFile(mContext,destFilePath, FileUtils.FileType.e_PDF)).show();
             dataSetChanged.updateDataset();
             return true;
         } catch (Exception e) {

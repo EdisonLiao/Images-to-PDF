@@ -43,7 +43,7 @@ public class FeedbackUtils {
      * Open application in play store, so that user can rate
      */
     public void rateUs() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle(mContext.getString(R.string.rate_title))
                 .setMessage(mContext.getString(R.string.rate_dialog_text))
                 .setNegativeButton(mContext.getString(R.string.rate_negative),
@@ -68,7 +68,7 @@ public class FeedbackUtils {
                     mSharedPreferences.edit().putInt(LAUNCH_COUNT, -1).apply();
                     dialogInterface.cancel();
                 });
-        builder.create().show();
+        builder.create().show();*/
     }
 
 

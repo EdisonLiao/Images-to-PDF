@@ -303,7 +303,7 @@ public class AddTextFragment extends Fragment implements MergeFilesAdapter.OnCli
 
             StringUtils.getInstance().getSnackbarwithAction(mActivity, R.string.snackbar_pdfCreated)
                     .setAction(R.string.snackbar_viewAction,
-                            v -> mFileUtils.openFile(mPath, FileUtils.FileType.e_PDF))
+                            v -> mFileUtils.openFile(requireContext(),mPath, FileUtils.FileType.e_PDF))
                     .show();
         } catch (Exception e) {
             e.printStackTrace();

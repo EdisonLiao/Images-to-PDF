@@ -65,10 +65,11 @@
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity android:name=".activity.CropImageActivity" />
+        <activity android:name=".activity.ReadPdfActivity"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.swati4star.shareFile"
+            android:authorities="com.edison.shareFile"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

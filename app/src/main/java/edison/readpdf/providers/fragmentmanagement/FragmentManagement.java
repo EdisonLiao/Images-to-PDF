@@ -12,13 +12,10 @@ import android.widget.Toast;
 import java.util.Objects;
 
 import edison.readpdf.R;
-import edison.readpdf.activity.WelcomeActivity;
-import edison.readpdf.fragment.AboutUsFragment;
 import edison.readpdf.fragment.AddImagesFragment;
 import edison.readpdf.fragment.AddTextFragment;
 import edison.readpdf.fragment.ExceltoPdfFragment;
 import edison.readpdf.fragment.ExtractTextFragment;
-import edison.readpdf.fragment.FAQFragment;
 import edison.readpdf.fragment.FavouritesFragment;
 import edison.readpdf.fragment.HistoryFragment;
 import edison.readpdf.fragment.HomeFragment;
@@ -29,15 +26,12 @@ import edison.readpdf.fragment.PdfToImageFragment;
 import edison.readpdf.fragment.QrBarcodeScanFragment;
 import edison.readpdf.fragment.RemoveDuplicatePagesFragment;
 import edison.readpdf.fragment.RemovePagesFragment;
-import edison.readpdf.fragment.SettingsFragment;
 import edison.readpdf.fragment.SplitFilesFragment;
 import edison.readpdf.fragment.ViewFilesFragment;
 import edison.readpdf.fragment.ZipToPdfFragment;
 import edison.readpdf.fragment.texttopdf.TextToPdfFragment;
 import edison.readpdf.util.FeedbackUtils;
 import edison.readpdf.util.FragmentUtils;
-import edison.readpdf.util.WhatsNewUtils;
-
 import static edison.readpdf.util.Constants.ACTION_MERGE_PDF;
 import static edison.readpdf.util.Constants.ACTION_SELECT_IMAGES;
 import static edison.readpdf.util.Constants.ACTION_TEXT_TO_PDF;
@@ -54,7 +48,6 @@ import static edison.readpdf.util.Constants.REMOVE_PAGES;
 import static edison.readpdf.util.Constants.REMOVE_PWd;
 import static edison.readpdf.util.Constants.REORDER_PAGES;
 import static edison.readpdf.util.Constants.ROTATE_PAGES;
-import static edison.readpdf.util.Constants.SHOW_WELCOME_ACT;
 
 /**
  * This is a fragment service that manages the fragments
@@ -178,15 +171,6 @@ public class FragmentManagement implements IFragmentManagement {
                 bundle.putString(BUNDLE_DATA, REMOVE_PWd);
                 fragment.setArguments(bundle);
                 break;
-            case R.id.nav_share:
-                mFeedbackUtils.shareApplication();
-                break;
-            case R.id.nav_about:
-                fragment = new AboutUsFragment();
-                break;
-            case R.id.nav_settings:
-                fragment = new SettingsFragment();
-                break;
             case R.id.nav_extract_images:
                 fragment = new PdfToImageFragment();
                 bundle.putString(BUNDLE_DATA, EXTRACT_IMAGES);
@@ -220,11 +204,6 @@ public class FragmentManagement implements IFragmentManagement {
                 bundle.putString(BUNDLE_DATA, ADD_IMAGES);
                 fragment.setArguments(bundle);
                 break;
-            case R.id.nav_help:
-                Intent intent = new Intent(mContext, WelcomeActivity.class);
-                intent.putExtra(SHOW_WELCOME_ACT, true);
-                mContext.startActivity(intent);
-                break;
             case R.id.nav_remove_duplicate_pages:
                 fragment = new RemoveDuplicatePagesFragment();
                 break;
@@ -239,12 +218,6 @@ public class FragmentManagement implements IFragmentManagement {
             case R.id.nav_zip_to_pdf:
                 fragment = new ZipToPdfFragment();
                 break;
-            case R.id.nav_whatsNew:
-                WhatsNewUtils.getInstance().displayDialog(mContext);
-                break;
-            case R.id.nav_rateus:
-                mFeedbackUtils.openWebPage("https://play.google.com/store/apps/details?id=edison.readpdf");
-                break;
             case R.id.nav_rotate_pages:
                 fragment = new ViewFilesFragment();
                 bundle.putInt(BUNDLE_DATA, ROTATE_PAGES);
@@ -252,9 +225,6 @@ public class FragmentManagement implements IFragmentManagement {
                 break;
             case R.id.nav_text_extract:
                 fragment = new ExtractTextFragment();
-                break;
-            case R.id.nav_faq:
-                fragment = new FAQFragment();
                 break;
         }
 
@@ -266,8 +236,7 @@ public class FragmentManagement implements IFragmentManagement {
         }
         // if help or share or what's new is clicked then return false, as we don't want
         // them to be selected
-        return itemId != R.id.nav_share && itemId != R.id.nav_help
-                && itemId != R.id.nav_whatsNew;
+        return true;
     }
 
     /**

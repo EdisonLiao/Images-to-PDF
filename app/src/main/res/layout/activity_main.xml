@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="-55dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="10dp"
             android:paddingTop="20dp"
             app:cardElevation="0dp"
             android:layout_marginBottom="-30dp"

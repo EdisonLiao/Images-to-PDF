@@ -31,7 +31,6 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-import edison.readpdf.BuildConfig;
 import edison.readpdf.R;
 import edison.readpdf.fragment.ImageToPdfFragment;
 import edison.readpdf.providers.fragmentmanagement.FragmentManagement;
@@ -40,16 +39,13 @@ import edison.readpdf.util.FeedbackUtils;
 import edison.readpdf.util.DirectoryUtils;
 import edison.readpdf.util.PermissionsUtils;
 import edison.readpdf.util.ThemeUtils;
-import edison.readpdf.util.WhatsNewUtils;
 
-import static edison.readpdf.util.Constants.IS_WELCOME_ACTIVITY_SHOWN;
 import static edison.readpdf.util.Constants.LAUNCH_COUNT;
 import static edison.readpdf.util.Constants.REQUEST_CODE_FOR_WRITE_PERMISSION;
 import static edison.readpdf.util.Constants.THEME_BLACK;
 import static edison.readpdf.util.Constants.THEME_DARK;
 import static edison.readpdf.util.Constants.THEME_SYSTEM;
 import static edison.readpdf.util.Constants.THEME_WHITE;
-import static edison.readpdf.util.Constants.VERSION_NAME;
 import static edison.readpdf.util.Constants.WRITE_PERMISSIONS;
 
 public class MainActivity extends AppCompatActivity
@@ -124,12 +120,6 @@ public class MainActivity extends AppCompatActivity
         }
         if (count != -1) {
             mSharedPreferences.edit().putInt(LAUNCH_COUNT, count + 1).apply();
-        }
-
-        String versionName = mSharedPreferences.getString(VERSION_NAME, "");
-        if (versionName != null && !versionName.equals(BuildConfig.VERSION_NAME)) {
-            WhatsNewUtils.getInstance().displayDialog(this);
-            mSharedPreferences.edit().putString(VERSION_NAME, BuildConfig.VERSION_NAME).apply();
         }
     }
 
@@ -298,7 +288,7 @@ public class MainActivity extends AppCompatActivity
                             mSettingsActivityOpenedForManageStoragePermission = true;
                             startActivity(intent);
                             dialog.dismiss();
-                        }).setNegativeButton(R.string.close_app_text, ((dialog, which) -> finishAndRemoveTask()))
+                        }).setNegativeButton(R.string.close_app_text, ((dialog, which) -> dialog.dismiss()))
                         .show();
             }
         }
@@ -332,8 +322,6 @@ public class MainActivity extends AppCompatActivity
         mFragmentSelectedMap.append(R.id.nav_history, R.string.history);
         mFragmentSelectedMap.append(R.id.nav_add_password, R.string.add_password);
         mFragmentSelectedMap.append(R.id.nav_remove_password, R.string.remove_password);
-        mFragmentSelectedMap.append(R.id.nav_about, R.string.about_us);
-        mFragmentSelectedMap.append(R.id.nav_settings, R.string.settings);
         mFragmentSelectedMap.append(R.id.nav_extract_images, R.string.extract_images);
         mFragmentSelectedMap.append(R.id.nav_pdf_to_images, R.string.pdf_to_images);
         mFragmentSelectedMap.append(R.id.nav_remove_pages, R.string.remove_pages);
@@ -346,7 +334,6 @@ public class MainActivity extends AppCompatActivity
         mFragmentSelectedMap.append(R.id.nav_zip_to_pdf, R.string.zip_to_pdf);
         mFragmentSelectedMap.append(R.id.nav_rotate_pages, R.string.rotate_pages);
         mFragmentSelectedMap.append(R.id.nav_excel_to_pdf, R.string.excel_to_pdf);
-        mFragmentSelectedMap.append(R.id.nav_faq, R.string.faqs);
     }
 
     /**

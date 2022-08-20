@@ -16,3 +16,5 @@
 #   public *;
 #}
 -dontwarn com.squareup.picasso.**
+
+-keep class com.shockwave.**

@@ -68,7 +68,7 @@ public class MergeHelper implements MergeFilesListener {
         if (isPDFMerged) {
             StringUtils.getInstance().getSnackbarwithAction(mActivity, R.string.pdf_merged)
                     .setAction(R.string.snackbar_viewAction, v ->
-                            mFileUtils.openFile(path, FileUtils.FileType.e_PDF)).show();
+                            mFileUtils.openFile(mActivity,path, FileUtils.FileType.e_PDF)).show();
             new DatabaseHelper(mActivity).insertRecord(path,
                     mActivity.getString(R.string.created));
         } else

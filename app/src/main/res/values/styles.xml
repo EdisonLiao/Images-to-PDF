@@ -100,9 +100,8 @@
         <item name="textAllCaps">false</item>
     </style>
     <style name="SplashTheme" parent="AppThemeWhite">
-        <item name="android:windowBackground">@drawable/splash_bg</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
-        <item name="android:statusBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/red</item>
+        <item name="android:statusBarColor">@color/red</item>
     </style>
 
     <style name="ToolbarThemeDark">

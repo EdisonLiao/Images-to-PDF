@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import edison.readpdf.R;
+import edison.readpdf.activity.ReadPdfActivity;
 import edison.readpdf.database.DatabaseHelper;
 import edison.readpdf.util.lambda.Consumer;
 
@@ -110,12 +111,12 @@ public class FileUtils {
      * @param path - path of the file to be opened
      *
      */
-    public void openFile(String path, FileType fileType) {
+    public void openFile(Context context,String path, FileType fileType) {
         if (path == null) {
             StringUtils.getInstance().showSnackbar(mContext, R.string.error_path_not_found);
             return;
         }
-        openFileInternal(path, fileType == FileType.e_PDF ?
+        openFileInternal(context,path, fileType == FileType.e_PDF ?
                 mContext.getString(R.string.pdf_type) : mContext.getString(R.string.txt_type));
     }
 
@@ -125,19 +126,10 @@ public class FileUtils {
      *
      * @param path - file path
      */
-    private void openFileInternal(String path, String dataType) {
-        File file = new File(path);
-        Intent target = new Intent(Intent.ACTION_VIEW);
-        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        try {
-            Uri uri = FileProvider.getUriForFile(mContext, AUTHORITY_APP, file);
-
-            target.setDataAndType(uri, dataType);
-            target.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            openIntent(Intent.createChooser(target, mContext.getString(R.string.open_file)));
-        } catch (Exception e) {
-            StringUtils.getInstance().showSnackbar(mContext, R.string.error_open_file);
-        }
+    private void openFileInternal(Context context,String path, String dataType) {
+        Intent intent = new Intent(context, ReadPdfActivity.class);
+        intent.putExtra(ReadPdfActivity.PDF_PATH,path);
+        context.startActivity(intent);
     }
 
     /**

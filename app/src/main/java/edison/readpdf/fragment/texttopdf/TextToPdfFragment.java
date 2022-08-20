@@ -267,7 +267,7 @@ public class TextToPdfFragment extends Fragment implements OnItemClickListener,
         }
         StringUtils.getInstance().getSnackbarwithAction(mActivity, R.string.snackbar_pdfCreated)
                 .setAction(R.string.snackbar_viewAction,
-                        v -> mFileUtils.openFile(mPath, FileUtils.FileType.e_PDF)).show();
+                        v -> mFileUtils.openFile(requireContext(),mPath, FileUtils.FileType.e_PDF)).show();
         mSelectFile.setText(R.string.select_text_file);
         mMorphButtonUtility.morphToGrey(mCreateTextPdf, mMorphButtonUtility.integer());
         mCreateTextPdf.setEnabled(false);
