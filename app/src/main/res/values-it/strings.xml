@@ -589,4 +589,7 @@
         <item> Ho alcune domande che non sono in questo documento delle FAQ. Come posso contattare lo sviluppatore? ##### Per ulteriori domande, invia un\'e-mail allo sviluppatore all\'indirizzo <strong>swati4star@gmail.com</strong></item>
     </string-array>
 
+    <string name="str_select_file">Seleziona File PDF</string>
+    <string name="str_select_local_pdf">Importa PDF</string>
+
 </resources>

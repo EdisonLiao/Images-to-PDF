@@ -520,5 +520,8 @@
 
     <string name="lbl_recently_used">Kürzlich verwendete Funktionen</string>
 
+    <string name="str_select_file">Wählen Sie PDF-Datei</string>
+    <string name="str_select_local_pdf">PDF importieren</string>
+
 
 </resources>

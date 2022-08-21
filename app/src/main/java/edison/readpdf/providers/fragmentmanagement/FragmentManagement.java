@@ -24,6 +24,7 @@ import edison.readpdf.fragment.InvertPdfFragment;
 import edison.readpdf.fragment.MergeFilesFragment;
 import edison.readpdf.fragment.PdfToImageFragment;
 import edison.readpdf.fragment.QrBarcodeScanFragment;
+import edison.readpdf.fragment.ReadLocalPdfFragment;
 import edison.readpdf.fragment.RemoveDuplicatePagesFragment;
 import edison.readpdf.fragment.RemovePagesFragment;
 import edison.readpdf.fragment.SplitFilesFragment;
@@ -225,6 +226,9 @@ public class FragmentManagement implements IFragmentManagement {
                 break;
             case R.id.nav_text_extract:
                 fragment = new ExtractTextFragment();
+                break;
+            case R.id.nav_local_pdf:
+                fragment = new ReadLocalPdfFragment();
                 break;
         }
 

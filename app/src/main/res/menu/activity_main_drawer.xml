@@ -35,6 +35,12 @@
                         android:id="@+id/nav_gallery"
                         android:icon="@drawable/ic_menu_gallery"
                         android:title="@string/viewFiles" />
+
+                    <item
+                        android:id="@+id/nav_local_pdf"
+                        android:icon="@mipmap/ic_launcher"
+                        android:title="@string/str_select_local_pdf" />
+
                     <item
                         android:id="@+id/nav_history"
                         android:icon="@drawable/ic_history_black_24dp"

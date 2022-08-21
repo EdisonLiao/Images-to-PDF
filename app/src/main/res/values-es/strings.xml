@@ -420,4 +420,7 @@
     <string name="delete_alert_singular">¿Desea eliminar el archivo seleccionado?</string>
     <string name="snackbar_files_deleted">Archivos eliminados</string>
     <string name="lbl_recently_used">Característica recientemente utilizada</string>
+
+    <string name="str_select_file">Seleccionar archivo PDFe</string>
+    <string name="str_select_local_pdf">Importar PDF</string>
 </resources>

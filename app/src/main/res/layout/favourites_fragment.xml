@@ -192,6 +192,15 @@
                     app:option_text="@string/compress_pdf" />
 
                 <edison.readpdf.customviews.MyCardView
+                    android:id="@+id/view_local_pdf_fv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:visibility="gone"
+                    app:option_icon="@mipmap/ic_launcher"
+                    app:option_text="@string/str_select_local_pdf" />
+
+                <edison.readpdf.customviews.MyCardView
                     android:id="@+id/remove_duplicates_pages_pdf_fav"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

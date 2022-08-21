@@ -55,6 +55,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     MyCardView textToPdf;
     @BindView(R.id.view_files)
     MyCardView viewFiles;
+    @BindView(R.id.view_local_pdf)
+    MyCardView viewLocalFiles;
     @BindView(R.id.view_history)
     MyCardView viewHistory;
     @BindView(R.id.split_pdf)
@@ -136,6 +138,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         excelToPdf.setOnClickListener(this);
         extractText.setOnClickListener(this);
         addText.setOnClickListener(this);
+        viewLocalFiles.setOnClickListener(this);
 
         mAdapter =  new RecentListAdapter(this);
         recentList.setAdapter(mAdapter);
@@ -206,6 +209,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.view_files:
                 fragment = new ViewFilesFragment();
+                break;
+            case R.id.view_local_pdf:
+                fragment = new ReadLocalPdfFragment();
                 break;
             case R.id.view_history:
                 fragment = new HistoryFragment();

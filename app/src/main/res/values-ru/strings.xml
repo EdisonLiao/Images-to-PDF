@@ -462,4 +462,7 @@
     <string name="delete_alert_singular">Вы хотите удалить выбранный файл?</string>
     <string name="snackbar_files_deleted">Файлы удалены</string>
   <string name="lbl_recently_used">Недавно использованная особенность</string>
+
+    <string name="str_select_file">Выберите PDF-файл</string>
+    <string name="str_select_local_pdf">Импорт PDF</string>
 </resources>

@@ -15,7 +15,7 @@
         <RelativeLayout
             android:id="@+id/toolbar_background_layout"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/toolbar_bg">
 
             <com.google.android.material.appbar.AppBarLayout
@@ -42,13 +42,16 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="-55dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
             android:paddingTop="20dp"
-            app:cardElevation="0dp"
-            android:layout_marginBottom="-30dp"
-            app:contentPaddingBottom="30dp"/>
+            app:cardElevation="0dp"/>
+
+        <FrameLayout
+            android:id="@+id/fl_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

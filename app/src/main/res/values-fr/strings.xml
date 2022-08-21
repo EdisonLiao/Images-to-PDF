@@ -410,4 +410,7 @@
     <string name="lbl_recently_used">Fonction récemment utilisée</string>
     <!--text to pdf-->
     <string name="error_pdf_not_created">Désolé, le pdf n\'a pas été créé. Veuillez réessayer.</string>
+
+    <string name="str_select_file">Sélectionnez le fichier PDF</string>
+    <string name="str_select_local_pdf">Importer PDF</string>
 </resources>

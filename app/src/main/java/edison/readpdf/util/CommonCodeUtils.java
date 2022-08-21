@@ -28,6 +28,7 @@ import static edison.readpdf.R.drawable.ic_excel;
 import static edison.readpdf.R.drawable.ic_history_black_24dp;
 import static edison.readpdf.R.drawable.ic_image_black_24dp;
 import static edison.readpdf.R.drawable.ic_invert_color_24dp;
+import static edison.readpdf.R.drawable.ic_launcher_foreground;
 import static edison.readpdf.R.drawable.ic_lock_black_24dp;
 import static edison.readpdf.R.drawable.ic_lock_open_black_24dp;
 import static edison.readpdf.R.drawable.ic_menu_camera;
@@ -68,6 +69,7 @@ import static edison.readpdf.R.id.nav_extract_images;
 import static edison.readpdf.R.id.nav_gallery;
 import static edison.readpdf.R.id.nav_history;
 import static edison.readpdf.R.id.nav_invert_pdf;
+import static edison.readpdf.R.id.nav_local_pdf;
 import static edison.readpdf.R.id.nav_merge;
 import static edison.readpdf.R.id.nav_pdf_to_images;
 import static edison.readpdf.R.id.nav_qrcode;
@@ -231,6 +233,8 @@ public class CommonCodeUtils {
                 nav_zip_to_pdf, ic_zip_to_pdf, R.string.zip_to_pdf);
         addFragmentPosition(homePageItems, R.id.add_text, add_text_fav,
                 nav_add_text, ic_text_format_black_24dp, R.string.add_text);
+        addFragmentPosition(homePageItems, R.id.view_local_pdf, R.id.view_local_pdf_fv,
+                nav_local_pdf, R.mipmap.ic_launcher, R.string.str_select_local_pdf);
         return mFragmentPositionMap;
     }
 

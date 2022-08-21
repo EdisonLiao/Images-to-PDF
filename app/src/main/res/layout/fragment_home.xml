@@ -124,6 +124,14 @@
             android:orientation="horizontal">
 
             <edison.readpdf.customviews.MyCardView
+                android:id="@+id/view_local_pdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                app:option_icon="@mipmap/ic_launcher"
+                app:option_text="@string/str_select_local_pdf" />
+
+            <edison.readpdf.customviews.MyCardView
                 android:id="@+id/view_files"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

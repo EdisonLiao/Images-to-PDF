@@ -12,6 +12,11 @@ import android.os.Environment;
 import android.preference.PreferenceManager;
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.nativead.NativeAd;
+import com.google.android.gms.ads.nativead.NativeAdView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -31,7 +36,10 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
+import edison.readpdf.BuildConfig;
 import edison.readpdf.R;
+import edison.readpdf.ads.AdmobAdMgr;
+import edison.readpdf.ads.IAdAdmobNativeListener;
 import edison.readpdf.fragment.ImageToPdfFragment;
 import edison.readpdf.providers.fragmentmanagement.FragmentManagement;
 import edison.readpdf.util.Constants;
@@ -58,6 +66,7 @@ public class MainActivity extends AppCompatActivity
     private FragmentManagement mFragmentManagement;
 
     private boolean mSettingsActivityOpenedForManageStoragePermission = false;
+    private NativeAd mNativeAd;
 
 
     @Override
@@ -66,6 +75,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+        });
+
         mNavigationView = findViewById(R.id.nav_view);
 
         setThemeOnActivityExclusiveComponents();
@@ -94,7 +108,31 @@ public class MainActivity extends AppCompatActivity
         // Check if  images are received
         handleReceivedImagesIntent(fragment);
 
-        displayFeedBackAndWhatsNew();
+        String adId = "ca-app-pub-7094078041880308/6130222400";
+        if (BuildConfig.DEBUG){
+            adId = "ca-app-pub-3940256099942544/2247696110";
+        }
+
+        AdmobAdMgr.sIns.requestNativeAd(this,adId,new AdmobNativeCallback());
+    }
+
+    private class AdmobNativeCallback implements IAdAdmobNativeListener{
+
+        @Override
+        public void onNativeAdLoadSuccess(NativeAd nativeAd) {
+            mNativeAd = nativeAd;
+            inflateAdView();
+        }
+
+        @Override
+        public void onNativeAdLoadFail(String msg, int errorCode) {}
+    }
+
+    private void inflateAdView(){
+        NativeAdView adView =
+                (NativeAdView) this.getLayoutInflater().inflate(R.layout.ad_unified, null);
+
+        AdmobAdMgr.sIns.populateNativeAdView(mNativeAd,adView,findViewById(R.id.fl_ad));
     }
 
     /**
@@ -128,6 +166,10 @@ public class MainActivity extends AppCompatActivity
         super.onDestroy();
         if (PermissionsUtils.getInstance().checkRuntimePermissions(this, WRITE_PERMISSIONS)) {
             DirectoryUtils.makeAndClearTemp();
+        }
+
+        if (mNativeAd != null){
+            mNativeAd.destroy();
         }
     }
 
@@ -334,6 +376,7 @@ public class MainActivity extends AppCompatActivity
         mFragmentSelectedMap.append(R.id.nav_zip_to_pdf, R.string.zip_to_pdf);
         mFragmentSelectedMap.append(R.id.nav_rotate_pages, R.string.rotate_pages);
         mFragmentSelectedMap.append(R.id.nav_excel_to_pdf, R.string.excel_to_pdf);
+        mFragmentSelectedMap.append(R.id.nav_local_pdf, R.string.str_select_local_pdf);
     }
 
     /**
